@@ -13,8 +13,11 @@ show_help() {
     echo "Commands:"
     echo "  global    Install skills to the global Antigravity folder (~/.gemini/...)"
     echo "  local     Install skills to the current project's .agent/skills folder"
+    echo "  update    Pull the latest skills from GitHub and update global/local"
     echo "  help      Show this help message"
 }
+
+REPO_URL="git@github.com:aicraftlab-dev/agent-skills.git"
 
 install_global() {
     echo "🚀 Installing skills globally to $GLOBAL_DEST..."
@@ -31,6 +34,20 @@ install_local() {
     echo "✅ Local installation complete!"
 }
 
+update_from_remote() {
+    echo "🔄 Updating skills from GitHub..."
+    if [ -d "$SOURCE_DIR/.git" ]; then
+        cd "$SOURCE_DIR" && git pull origin main
+    else
+        echo "⚠️  Source directory is not a git repo. Attempting to clone..."
+        git clone "$REPO_URL" "$SOURCE_DIR/temp_clone"
+        cp -R "$SOURCE_DIR/temp_clone/.agent/skills/"* "$SKILLS_DIR/"
+        rm -rf "$SOURCE_DIR/temp_clone"
+    fi
+    echo "✅ Skills updated. Re-running global installation..."
+    install_global
+}
+
 case "$1" in
     global)
         install_global
@@ -38,7 +55,11 @@ case "$1" in
     local)
         install_local
         ;;
+    update)
+        update_from_remote
+        ;;
     help|*)
         show_help
         ;;
 esac
+
