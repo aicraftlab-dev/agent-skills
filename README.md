@@ -2,6 +2,16 @@
 
 This repository contains a collection of specialized Antigravity Skills designed to guide AI agents through the entire lifecycle of building a product.
 
+## ⚡ Quick Start (One-Line Install)
+
+If you don't have this repo yet, run this in your terminal to install everything globally:
+```bash
+curl -fsSL https://raw.githubusercontent.com/aicraftlab-dev/agent-skills/main/install.sh | bash
+```
+*Note: This will clone the skills to `~/.aicraftlab/agent-skills` and activate them globally.*
+
+---
+
 ## Skills Included
 
 - **Product Research & Strategy**: Market analysis and MVP scoping.
