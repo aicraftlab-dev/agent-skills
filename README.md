@@ -30,6 +30,7 @@ curl -fsSL https://raw.githubusercontent.com/aicraftlab-dev/agent-skills/main/in
 | **GitHub** | `github-manager` | Workflow management, PR reviews, CI status. |
 | **QA** | `quality-assurance-testing` | E2E testing, bug hunting, performance audits. |
 | **Marketing** | `product-marketing-launch` | SEO, GTM strategy, conversion copywriting. |
+| **Writer** | `technical-writer` | API docs, READMEs, setup guides, tutorials. |
 
 ---
 
