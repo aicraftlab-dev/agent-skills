@@ -29,8 +29,11 @@ curl -fsSL https://raw.githubusercontent.com/aicraftlab-dev/agent-skills/main/in
 | **Frontend** | `frontend-development` | High-perf UI, animations, state management. |
 | **GitHub** | `github-manager` | Workflow management, PR reviews, CI status. |
 | **QA** | `quality-assurance-testing` | E2E testing, bug hunting, performance audits. |
+| **SRE** | `site-reliability-engineer` | Reliability, scalability, performance, monitoring. |
+| **Finance** | `finance-controller` | Expenses, projections, budgeting, business economy. |
 | **Marketing** | `product-marketing-launch` | SEO, GTM strategy, conversion copywriting. |
 | **Writer** | `technical-writer` | API docs, READMEs, setup guides, tutorials. |
+| **Skill Master** | `skill-master` | Creating, managing, and refining skills. |
 
 ---
 
